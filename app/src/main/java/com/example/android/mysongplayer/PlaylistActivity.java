@@ -40,7 +40,7 @@ public class PlaylistActivity extends AppCompatActivity {
             mySongs.add(new Song("Your love is king", "Sade", R.drawable.sade, playlistName));
             mySongs.add(new Song("Smooth operator", "Sade", R.drawable.sade, playlistName));
             mySongs.add(new Song("Hang on to your love", "Sade", R.drawable.sade, playlistName));
-            mySongs.add(new Song("Is it a crime?", "Sade", R.drawable.sade, playlistName));
+            mySongs.add(new Song("Is it a crime", "Sade", R.drawable.sade, playlistName));
             mySongs.add(new Song("King of sorrow", "Sade", R.drawable.sade, playlistName));
         }
 
