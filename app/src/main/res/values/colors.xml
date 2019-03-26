@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#424242</color>
+    <color name="primaryLightColor">#6d6d6d</color>
+    <color name="primaryDarkColor">#1b1b1b</color>
+    <color name="secondaryColor">#546e7a</color>
+    <color name="secondaryLightColor">#819ca9</color>
+    <color name="secondaryDarkColor">#29434e</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+
+    <color name="playlist1">#f57f17</color>
+    <color name="playlist2">#d84315</color>
+    <color name="playlist3">#9e9d24</color>
+    <color name="playlist4">#2e7d32</color>
+    <color name="playlist5">#00695c</color>
+    <color name="playlist6">#0277bd</color>
+
+</resources>

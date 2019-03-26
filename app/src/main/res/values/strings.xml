@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MySongPlayer</string>
+
+    <string name="playlist1">Francesca 25</string>
+    <string name="playlist2">Sade</string>
+    <string name="playlist3">Playlist 3</string>
+    <string name="playlist4">Playlist 4</string>
+    <string name="playlist5">Playlist 5</string>
+    <string name="playlist6">Playlist 6</string>
+</resources>
