@@ -1,45 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/playlist1"
-        style="@style/playlist"
-        android:background="@color/playlist1"
-        android:text="@string/playlist1" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/playlist2"
-        style="@style/playlist"
-        android:background="@color/playlist2"
-        android:text="@string/playlist2" />
+        <TextView
+            android:id="@+id/playlist1"
+            style="@style/playlist"
+            android:background="@color/playlist1"
+            android:text="@string/playlist1" />
 
-    <TextView
-        android:id="@+id/playlist3"
-        style="@style/playlist"
-        android:background="@color/playlist3"
-        android:text="@string/playlist3" />
+        <TextView
+            android:id="@+id/playlist2"
+            style="@style/playlist"
+            android:background="@color/playlist2"
+            android:text="@string/playlist2" />
 
-    <TextView
-        android:id="@+id/playlist4"
-        style="@style/playlist"
-        android:background="@color/playlist4"
-        android:text="@string/playlist4" />
+        <TextView
+            android:id="@+id/playlist3"
+            style="@style/playlist"
+            android:background="@color/playlist3"
+            android:text="@string/playlist3" />
 
-    <TextView
-        android:id="@+id/playlist5"
-        style="@style/playlist"
-        android:background="@color/playlist5"
-        android:text="@string/playlist5" />
+        <TextView
+            android:id="@+id/playlist4"
+            style="@style/playlist"
+            android:background="@color/playlist4"
+            android:text="@string/playlist4" />
 
-    <TextView
-        android:id="@+id/playlist6"
-        style="@style/playlist"
-        android:background="@color/playlist6"
-        android:text="@string/playlist6" />
-</LinearLayout>
+        <TextView
+            android:id="@+id/playlist5"
+            style="@style/playlist"
+            android:background="@color/playlist5"
+            android:text="@string/playlist5" />
+
+        <TextView
+            android:id="@+id/playlist6"
+            style="@style/playlist"
+            android:background="@color/playlist6"
+            android:text="@string/playlist6" />
+    </LinearLayout>
+
+</ScrollView>

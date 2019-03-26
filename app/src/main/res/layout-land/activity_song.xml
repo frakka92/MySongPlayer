@@ -7,92 +7,105 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="Playing from"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/playlist_from"
+        app:layout_constraintStart_toStartOf="@+id/playlist_from"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/playlist_from"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Playlist Name"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toEndOf="@+id/albumID"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
         android:id="@+id/albumID"
-        android:layout_width="match_parent"
+        android:layout_width="317dp"
         android:layout_height="300dp"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playlist_from"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.521"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:text="Title"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/albumID" />
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/albumID"
+        app:layout_constraintTop_toBottomOf="@+id/artist" />
 
     <TextView
         android:id="@+id/artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:text="Artist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toEndOf="@+id/albumID"
+        app:layout_constraintTop_toBottomOf="@+id/playlist_from" />
 
     <ImageView
         android:id="@+id/previous"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
+
+        android:layout_marginStart="124dp"
         app:layout_constraintBottom_toBottomOf="@+id/play"
-        app:layout_constraintEnd_toStartOf="@+id/play"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/albumID"
         app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_media_previous" />
 
     <ImageView
         android:id="@+id/play"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/next"
-        app:layout_constraintTop_toBottomOf="@+id/artist"
-        app:layout_constraintVertical_bias="0.211"
+        app:layout_constraintStart_toEndOf="@+id/previous"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.29"
         app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageView
         android:id="@+id/next"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="84dp"
         app:layout_constraintBottom_toBottomOf="@+id/play"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/play"
         app:layout_constraintTop_toTopOf="@+id/play"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_media_next" />
 </android.support.constraint.ConstraintLayout>
