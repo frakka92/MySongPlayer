@@ -1,10 +1,47 @@
 <resources>
     <string name="app_name">MySongPlayer</string>
+    <string name="artist">Artist</string>
+    <string name="title">Title</string>
+    <string name="playlist_name">Playlist Name</string>
+    <string name="playing_from">Playing from</string>
 
     <string name="playlist1">Francesca 25</string>
+    <string name="francesca_michielin">Francesca Michielin</string>
+    <string name="amore_esite">L\'amore esiste</string>
+    <string name="un_cuore_in_due">Un cuore in due</string>
+    <string name="venti5_febbraio">25 Febbraio</string>
+    <string name="io_non_abito_al_mare">Io Non Abito Al Mare</string>
+    <string name="bolivia">Bolivia</string>
+    <string name="vulcano">Vulcano</string>
+
     <string name="playlist2">Sade</string>
-    <string name="playlist3">Playlist 3</string>
-    <string name="playlist4">Playlist 4</string>
-    <string name="playlist5">Playlist 5</string>
-    <string name="playlist6">Playlist 6</string>
+    <string name="sade">Sade</string>
+    <string name="your_love_is_king">Your love is king</string>
+    <string name="smooth_operator">Smooth operator</string>
+    <string name="hang_on_to_your_love">Hang on to your love</string>
+    <string name="is_it_a_crime">Is it a crime</string>
+    <string name="king_of_sorrow">King of sorrow</string>
+
+    <string name="playlist3">Evanescence</string>
+    <string name="evanescence">Evanescence</string>
+    <string name="bring_me_to_life">Bring me to life</string>
+    <string name="my_immortal">My immortal</string>
+
+    <string name="playlist4">Queen</string>
+    <string name="queen">Queen</string>
+    <string name="we_will_rock_you">We will rock you</string>
+    <string name="i_want_it_all">I want it all</string>
+
+    <string name="playlist5">Vasco Rossi</string>
+    <string name="vasco_rossi">Vasco Rossi</string>
+    <string name="ce_chi_dice_no">C\'è chi dice no</string>
+    <string name="luna_per_te">L\'una per te</string>
+
+    <string name="playlist6">Avenged Sevenfold</string>
+    <string name="a7x">Avenged Sevenfold</string>
+    <string name="remenissions">Remenissions</string>
+    <string name="so_far_away">So far away</string>
+
+
+
 </resources>

@@ -16,7 +16,7 @@ public class Song {
     private int mAlbumCoverID;
 
     //playlist where the song is
-    private String playlist;
+    private String mPlaylist;
 
     /**
      * Create a new song object
@@ -24,13 +24,13 @@ public class Song {
      * @param mTitle        is title of the song
      * @param mArtist       is the name of the artist
      * @param mAlbumCoverID is the image of the song's album
-     * @param playlist      playlist of the song
+     * @param mPlaylist      playlist of the song
      */
-    public Song(String mTitle, String mArtist, int mAlbumCoverID, String playlist) {
+    public Song(String mTitle, String mArtist, int mAlbumCoverID, String mPlaylist) {
         this.mTitle = mTitle;
         this.mArtist = mArtist;
         this.mAlbumCoverID = mAlbumCoverID;
-        this.playlist = playlist;
+        this.mPlaylist = mPlaylist;
     }
 
     /**
@@ -66,11 +66,11 @@ public class Song {
         this.mAlbumCoverID = mAlbumCoverID;
     }
 
-    public String getPlaylist() {
-        return playlist;
+    public String getmPlaylist() {
+        return mPlaylist;
     }
 
-    public void setPlaylist(String playlist) {
-        this.playlist = playlist;
+    public void setmPlaylist(String mPlaylist) {
+        this.mPlaylist = mPlaylist;
     }
 }

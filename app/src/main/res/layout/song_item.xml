@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/list_song"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
+    android:layout_height="75dp">
 
     <ImageView
         android:id="@+id/album_song"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:padding="8dp"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        android:layout_width="@dimen/album_icon"
+        android:layout_height="@dimen/album_icon"
+        android:layout_margin="@dimen/small_margin"
+        tools:srcCompat="@drawable/ic_grade" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:layout_margin="@dimen/small_margin"
+        android:layout_toEndOf="@id/album_song"
+        android:layout_toRightOf="@id/album_song"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/title_song"
@@ -25,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="Title" />
+            android:text="@string/title" />
 
         <TextView
             android:id="@+id/artist_song"
@@ -33,9 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="Artist" />
-
+            android:text="@string/artist" />
 
     </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

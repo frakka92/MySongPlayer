@@ -41,5 +41,61 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(playlistIntent);
             }
         });
+
+        //I set the onClickListener on the first static playlist
+        final TextView evanescenceTextView = findViewById(R.id.playlist3);
+        evanescenceTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
+
+                //I want to display the name of the playlist so I need to pass it as Extras
+                Bundle b = new Bundle();
+                b.putString("playlistName", evanescenceTextView.getText().toString());
+                playlistIntent.putExtras(b);
+                startActivity(playlistIntent);
+            }
+        });
+
+        //I set the onClickListener on the second static playlist
+        final TextView queenTextView = findViewById(R.id.playlist4);
+        queenTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
+                Bundle b = new Bundle();
+                b.putString("playlistName", queenTextView.getText().toString());
+                playlistIntent.putExtras(b);
+                startActivity(playlistIntent);
+            }
+        });
+
+        //I set the onClickListener on the first static playlist
+        final TextView vascorossiTextView = findViewById(R.id.playlist5);
+        vascorossiTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
+
+                //I want to display the name of the playlist so I need to pass it as Extras
+                Bundle b = new Bundle();
+                b.putString("playlistName", vascorossiTextView.getText().toString());
+                playlistIntent.putExtras(b);
+                startActivity(playlistIntent);
+            }
+        });
+
+        //I set the onClickListener on the second static playlist
+        final TextView avengedSevenfoldTextView = findViewById(R.id.playlist6);
+        avengedSevenfoldTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
+                Bundle b = new Bundle();
+                b.putString("playlistName", avengedSevenfoldTextView.getText().toString());
+                playlistIntent.putExtras(b);
+                startActivity(playlistIntent);
+            }
+        });
     }
 }
