@@ -16,7 +16,8 @@
 
     <dimen name="artist_margin_top">60dp</dimen>
 
-    <dimen name="next_margin_end">84dp</dimen>
+    <dimen name="next_margin_end">92dp</dimen>
+    <dimen name="next_margin_right">92dp</dimen>
 
     <dimen name="play_margin_top">84dp</dimen>
     <dimen name="play_margin_end">44dp</dimen>

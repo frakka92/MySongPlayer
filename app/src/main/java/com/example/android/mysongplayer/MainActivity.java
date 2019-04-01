@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 
+import static com.example.android.mysongplayer.Constants.*;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //I want to display the name of the playlist so I need to pass it as Extras
                 Bundle b = new Bundle();
-                b.putString("playlistName", francesca25TextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, francesca25TextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
                 Bundle b = new Bundle();
-                b.putString("playlistName", sadeTextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, sadeTextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //I want to display the name of the playlist so I need to pass it as Extras
                 Bundle b = new Bundle();
-                b.putString("playlistName", evanescenceTextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, evanescenceTextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
                 Bundle b = new Bundle();
-                b.putString("playlistName", queenTextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, queenTextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }
@@ -79,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //I want to display the name of the playlist so I need to pass it as Extras
                 Bundle b = new Bundle();
-                b.putString("playlistName", vascorossiTextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, vascorossiTextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent playlistIntent = new Intent(MainActivity.this, PlaylistActivity.class);
                 Bundle b = new Bundle();
-                b.putString("playlistName", avengedSevenfoldTextView.getText().toString());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, avengedSevenfoldTextView.getText().toString());
                 playlistIntent.putExtras(b);
                 startActivity(playlistIntent);
             }

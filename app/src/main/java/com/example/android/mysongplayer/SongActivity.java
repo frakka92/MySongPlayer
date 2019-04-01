@@ -1,29 +1,29 @@
 package com.example.android.mysongplayer;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SongActivity extends AppCompatActivity {
+import static com.example.android.mysongplayer.Constants.*;
 
-    public static final String INTENT_KEY_NAME_PLAYLIST = "playlistName";
-    public static final String INTENT_KEY_NAME_TITLE = "title";
-    public static final String INTENT_KEY_NAME_ARTIST = "artist";
-    public static final String INTENT_KEY_NAME_ALBUMID = "albumID";
+public class SongActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_song);
 
-        String playlistName,title,artist;
+        String playlistName, title, artist;
         int album;
 
         //I get the extras if exist otherwise it will throw a NullPointerException and the app will crash
-        if(getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
             playlistName = getIntent().getExtras().getString(INTENT_KEY_NAME_PLAYLIST);
             //Log.v("SongActivity_playlist", playlistName);
 
@@ -51,5 +51,14 @@ public class SongActivity extends AppCompatActivity {
             TextView artistTextView = findViewById(R.id.artist);
             artistTextView.setText(artist);
         }
+
+        Button backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mainIntent = new Intent(SongActivity.this, MainActivity.class);
+                startActivity(mainIntent);
+            }
+        });
     }
 }

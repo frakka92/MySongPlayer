@@ -1,6 +1,7 @@
 package com.example.android.mysongplayer;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class SongAdapter extends ArrayAdapter<Song> {
+
+    static class ViewHolder {
+        public TextView titleHolder, artistHolder; // playlistHolder;
+        public ImageView albumHolder;
+    }
+
     /**
      * This is our own custom constructor (it doesn't mirror a superclass constructor).
      * The context is used to inflate the layout file, and the list is the data we want
@@ -39,20 +46,38 @@ public class SongAdapter extends ArrayAdapter<Song> {
         // Check if the existing view is being reused, otherwise inflate the view
         View listView = convertView;
         if (listView == null) {
-            listView = LayoutInflater.from(getContext()).inflate(R.layout.song_item, parent, false);
+            listView = LayoutInflater.from(getContext()).inflate(R.layout.song_listitem, parent, false);
+
+            /* I user a view holder where I store my variables in song_listitem.xml
+            because it's faster than using findViewById methd or XML inflating
+             */
+            ViewHolder viewHolder = new ViewHolder();
+            viewHolder.titleHolder = listView.findViewById(R.id.title_song);
+            viewHolder.artistHolder = listView.findViewById(R.id.artist_song);
+            //viewHolder.playlistHolder = listView.findViewById(R.id.playlist_from);
+            viewHolder.albumHolder = listView.findViewById(R.id.album_song);
+            listView.setTag(viewHolder);
         }
 
         //get the current song with the method getItem
         Song currentSong = getItem(position);
 
-        TextView titleTextView = listView.findViewById(R.id.title_song);
-        titleTextView.setText(currentSong.getmTitle());
+        ViewHolder holder = (ViewHolder) listView.getTag();
+        //Log.v("getmTitle_SongAdapter", currentSong.getmTitle());
+        holder.titleHolder.setText(currentSong.getmTitle());
 
-        TextView artistTextView = listView.findViewById(R.id.artist_song);
-        artistTextView.setText(currentSong.getmArtist());
+        //Log.v("getmArtist_SongAdapter", currentSong.getmArtist());
+        holder.artistHolder.setText(currentSong.getmArtist());
 
-        ImageView albumImage = listView.findViewById(R.id.album_song);
-        albumImage.setImageResource(currentSong.getmAlbumCoverID());
+        //Log.v("getmAlbum_SongAdapter", Integer.toString(currentSong.getmAlbumCoverID()));
+        holder.albumHolder.setImageResource(currentSong.getmAlbumCoverID());
+
+        /*
+        Note: I don't need the playlist because there isn't in song_listitem
+         */
+
+        //Log.v("getmPlaylistSongAdapter", currentSong.getmPlaylist());
+        //holder.playlistHolder.setText(currentSong.getmPlaylist());
 
         return listView;
     }

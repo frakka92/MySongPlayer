@@ -7,16 +7,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-
 import java.util.ArrayList;
+
+import static com.example.android.mysongplayer.Constants.*;
 
 public class PlaylistActivity extends AppCompatActivity {
 
-
-    public static final String INTENT_KEY_NAME = "playlistName";
 
     public static String playlistName;
 
@@ -27,7 +24,7 @@ public class PlaylistActivity extends AppCompatActivity {
 
          //I get the playlist name checking if exists otherwise it will throw a NullPointerException and the app will crash
         if (getIntent().getExtras() != null){
-            playlistName = getIntent().getExtras().getString(INTENT_KEY_NAME);
+            playlistName = getIntent().getExtras().getString(INTENT_KEY_NAME_PLAYLIST);
             // Log.v("PlaylistActivity", playlistName);
             ActionBar ab = getSupportActionBar();
             ab.setTitle(playlistName);
@@ -41,9 +38,9 @@ public class PlaylistActivity extends AppCompatActivity {
             mySongs.add(new Song(getString(R.string.amore_esite), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
             mySongs.add(new Song(getString(R.string.un_cuore_in_due), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
             mySongs.add(new Song(getString(R.string.venti5_febbraio), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
-            mySongs.add(new Song(getString(R.string.io_non_abito_al_mare), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
-            mySongs.add(new Song(getString(R.string.bolivia), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
-            mySongs.add(new Song(getString(R.string.vulcano), getString(R.string.francesca_michielin), R.drawable.di20are, playlistName));
+            mySongs.add(new Song(getString(R.string.io_non_abito_al_mare), getString(R.string.francesca_michielin), R.drawable.a2640, playlistName));
+            mySongs.add(new Song(getString(R.string.bolivia), getString(R.string.francesca_michielin), R.drawable.a2640, playlistName));
+            mySongs.add(new Song(getString(R.string.vulcano), getString(R.string.francesca_michielin), R.drawable.a2640, playlistName));
         }
 
         //Sade Playlist
@@ -90,17 +87,17 @@ public class PlaylistActivity extends AppCompatActivity {
                 Bundle b = new Bundle();
 
                 //I need the information of the clicked object to display them in SongActivity
-                b.putString("title", mySongs.get(position).getmTitle());
-                Log.v("Playlist_title", mySongs.get(position).getmTitle());
+                b.putString(INTENT_KEY_NAME_TITLE, mySongs.get(position).getmTitle());
+                //Log.v("Playlist_title", mySongs.get(position).getmTitle());
 
-                b.putString("artist", mySongs.get(position).getmArtist());
-                Log.v("Playlist_artist", mySongs.get(position).getmArtist());
+                b.putString(INTENT_KEY_NAME_ARTIST, mySongs.get(position).getmArtist());
+                //Log.v("Playlist_artist", mySongs.get(position).getmArtist());
 
-                b.putInt("albumID", mySongs.get(position).getmAlbumCoverID());
-                Log.v("Playlist_albumID", Integer.toString(mySongs.get(position).getmAlbumCoverID()));
+                b.putInt(INTENT_KEY_NAME_ALBUMID, mySongs.get(position).getmAlbumCoverID());
+                //Log.v("Playlist_albumID", Integer.toString(mySongs.get(position).getmAlbumCoverID()));
 
-                b.putString("playlistName", mySongs.get(position).getmPlaylist());
-                Log.v("Playlist_playlistName", mySongs.get(position).getmPlaylist());
+                b.putString(INTENT_KEY_NAME_PLAYLIST, mySongs.get(position).getmPlaylist());
+                //Log.v("Playlist_playlistName", mySongs.get(position).getmPlaylist());
                 songIntent.putExtras(b);
                 startActivity(songIntent);
             }

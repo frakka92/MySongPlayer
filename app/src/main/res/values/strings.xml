@@ -43,5 +43,11 @@
     <string name="so_far_away">So far away</string>
 
 
+    <!-- Content Description -->
+    <string name="album_icon_description">Album icon</string>
+    <string name="previous_button_description">Previous</string>
+    <string name="play_button_description">Play</string>
+    <string name="next_button_description">Next</string>
+    <string name="back">BACK</string>
 
 </resources>

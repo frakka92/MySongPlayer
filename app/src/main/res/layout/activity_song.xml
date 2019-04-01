@@ -7,12 +7,7 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:gravity="center"
+        style="@style/text"
         android:text="@string/playing_from"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,12 +15,7 @@
 
     <TextView
         android:id="@+id/playlist_from"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:gravity="center"
+        style="@style/text"
         android:text="@string/playlist_name"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -38,7 +28,7 @@
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/album_icon_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playlist_from"
@@ -46,12 +36,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:gravity="center"
+        style="@style/text"
         android:text="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,24 +44,19 @@
 
     <TextView
         android:id="@+id/artist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/activity_horizontal_margin"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginEnd="@dimen/activity_horizontal_margin"
-        android:gravity="center"
+        style="@style/text"
         android:text="@string/artist"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/previous"
         android:layout_width="@dimen/song_icons"
         android:layout_height="@dimen/song_icons"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/previous_button_description"
         android:src="@drawable/ic_skip_previous"
         app:layout_constraintBottom_toBottomOf="@+id/play"
         app:layout_constraintEnd_toStartOf="@+id/play"
@@ -85,7 +65,7 @@
         app:layout_constraintTop_toTopOf="@+id/play"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/play"
         android:layout_width="@dimen/song_icons"
         android:layout_height="@dimen/song_icons"
@@ -93,23 +73,40 @@
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/play_button_description"
         android:src="@drawable/ic_play_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/next"
         app:layout_constraintTop_toBottomOf="@+id/artist"
         app:layout_constraintVertical_bias="0.146" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/next"
         android:layout_width="@dimen/song_icons"
         android:layout_height="@dimen/song_icons"
-        android:layout_marginEnd="92dp"
-        android:layout_marginRight="92dp"
-        android:contentDescription="TODO"
+        android:layout_marginEnd="@dimen/next_margin_end"
+        android:layout_marginRight="@dimen/next_margin_right"
+        android:contentDescription="@string/next_button_description"
         android:src="@drawable/ic_skip_next"
         app:layout_constraintBottom_toBottomOf="@+id/play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/play"
         app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/play" />
+
 </android.support.constraint.ConstraintLayout>
