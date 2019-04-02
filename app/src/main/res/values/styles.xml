@@ -17,6 +17,10 @@
         <item name="android:layout_margin">16dp</item>
     </style>
 
+    <!-- Follow naming conventions of your style's parent. By matching system/AppCompat names they'll be easier to find
+    (e.g. <style name="Widget.Hope.Button" parent="@style/Widget.AppCompat.Button"/>)
+    Prefer inheriting from AppCompat instead of system styles to ensure backward compatibility.
+    -->
     <style name="text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

@@ -24,7 +24,7 @@
     <dimen name="play_margin_start_landscape">12dp</dimen>
 
     <dimen name="previous_margin_end">124dp</dimen>
-
+    <dimen name="height_relativelayout_listitem">75dp</dimen>
 
 
 </resources>

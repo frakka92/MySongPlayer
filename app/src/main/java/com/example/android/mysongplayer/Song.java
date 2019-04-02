@@ -24,7 +24,7 @@ public class Song {
      * @param mTitle        is title of the song
      * @param mArtist       is the name of the artist
      * @param mAlbumCoverID is the image of the song's album
-     * @param mPlaylist      playlist of the song
+     * @param mPlaylist     playlist of the song
      */
     public Song(String mTitle, String mArtist, int mAlbumCoverID, String mPlaylist) {
         this.mTitle = mTitle;
@@ -40,19 +40,11 @@ public class Song {
         return mTitle;
     }
 
-    public void setmTitle(String mTitle) {
-        this.mTitle = mTitle;
-    }
-
     /**
      * @return the name of the artist
      */
     public String getmArtist() {
         return mArtist;
-    }
-
-    public void setmArtist(String mArtist) {
-        this.mArtist = mArtist;
     }
 
     /**
@@ -62,15 +54,8 @@ public class Song {
         return mAlbumCoverID;
     }
 
-    public void setmAlbumCoverID(int mAlbumCoverID) {
-        this.mAlbumCoverID = mAlbumCoverID;
-    }
-
     public String getmPlaylist() {
         return mPlaylist;
     }
 
-    public void setmPlaylist(String mPlaylist) {
-        this.mPlaylist = mPlaylist;
-    }
 }

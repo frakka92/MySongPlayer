@@ -1,7 +1,6 @@
 package com.example.android.mysongplayer;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,12 +48,11 @@ public class SongAdapter extends ArrayAdapter<Song> {
             listView = LayoutInflater.from(getContext()).inflate(R.layout.song_listitem, parent, false);
 
             /* I user a view holder where I store my variables in song_listitem.xml
-            because it's faster than using findViewById methd or XML inflating
+            because it's faster than using findViewById method or XML inflating
              */
             ViewHolder viewHolder = new ViewHolder();
             viewHolder.titleHolder = listView.findViewById(R.id.title_song);
             viewHolder.artistHolder = listView.findViewById(R.id.artist_song);
-            //viewHolder.playlistHolder = listView.findViewById(R.id.playlist_from);
             viewHolder.albumHolder = listView.findViewById(R.id.album_song);
             listView.setTag(viewHolder);
         }
@@ -63,21 +61,10 @@ public class SongAdapter extends ArrayAdapter<Song> {
         Song currentSong = getItem(position);
 
         ViewHolder holder = (ViewHolder) listView.getTag();
-        //Log.v("getmTitle_SongAdapter", currentSong.getmTitle());
+
         holder.titleHolder.setText(currentSong.getmTitle());
-
-        //Log.v("getmArtist_SongAdapter", currentSong.getmArtist());
         holder.artistHolder.setText(currentSong.getmArtist());
-
-        //Log.v("getmAlbum_SongAdapter", Integer.toString(currentSong.getmAlbumCoverID()));
         holder.albumHolder.setImageResource(currentSong.getmAlbumCoverID());
-
-        /*
-        Note: I don't need the playlist because there isn't in song_listitem
-         */
-
-        //Log.v("getmPlaylistSongAdapter", currentSong.getmPlaylist());
-        //holder.playlistHolder.setText(currentSong.getmPlaylist());
 
         return listView;
     }
